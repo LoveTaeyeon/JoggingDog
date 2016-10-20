@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+	<title>主页</title>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/component.css" rel="stylesheet" type="text/css"  />
+	<!--web-font-->
+<!--
+	<link href='http://fonts.useso.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
+-->
+	<!--//web-font-->
+	<!-- Custom Theme files -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--	<script src="http://ajax.useso.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+	<!-- //Custom Theme files -->
+	<!-- js -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/modernizr.custom.js"></script>
+	<!-- //js -->	
+	<!-- start-smoth-scrolling-->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>	
+	<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	</script>
+	<!--//end-smoth-scrolling-->
+	
+    <script src="js/modernizr.custom.js"></script>
+		
+
+</head>
+<body class="cbp-spmenu-push">
+	<div class="banner">
+		<div class="col-md-8 banner-left">
+			<img src="images/banner.jpg" alt=""/>
+		</div>
+		<div class="col-md-4 banner-right">
+			<div class="top-nav">
+				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+					<h3>Menu</h3>
+					<a href="index.html" class="active">主页</a>
+					<a href="Login.html">登录注册</a>
+<!--
+					<a href="HealthEat.html">饮食推荐</a>
+					<a href="TestBodyFat.html">体脂率测试</a>
+					<a href="SendPlan.html">健身方案推荐</a>
+					<a href="ChangeBody.html">修改体测信息</a>
+-->
+				</nav>
+				<div class="main buttonset">	
+						<!-- Class "cbp-spmenu-open" 被应用于 "cbp-spmenu-push-toleft" 或者 "cbp-spmenu-push-toright" 在主体上 -->
+						<button id="showRightPush"><img src="images/menu-icon.png" alt=""/></button>
+						<!--<span class="menu"></span>-->
+				</div>
+				<script src="js/classie.js"></script>
+				<script>
+				var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+				showRightPush = document.getElementById( 'showRightPush' ),
+				body = document.body;
+
+				showRightPush.onclick = function() {
+					classie.toggle( this, 'active' );
+					classie.toggle( body, 'cbp-spmenu-push-toleft' );
+					classie.toggle( menuRight, 'cbp-spmenu-open' );
+					disableOther( 'showRightPush' );
+				};
+
+				function disableOther( button ) {
+					if( button !== 'showRightPush' ) {
+						classie.toggle( showRightPush, 'disabled' );
+					}
+				}
+			</script>
+			<!-- 菜单脚本结束 -->
+			</div>	
+			<h1>Jogging Dog</h1>
+			<br>
+			<p>Jogging Dog是为了面对零健身基础而又想要拥有好身材的学生群体制定的。运用科学算法，根据身材数据以及意愿生成专属健身方案，依反馈不断更新训练计划，给你贴心的个性化，让你零基础玩转健身 ^_^</p>
+			<p class="bnr-top">在完成健身计划时，你的训练等级也会不断增加，不同计划阶段，不同的成就，可以分享给你的好友 *_*<br>登录可使用更多功能哦!</p>
+		</div>	
+		<div class="clearfix"> </div>
+	</div>
+	<div class="banner-bottom">
+		<div class="col-md-6 banner-bottom-left">
+			<div class="banner-bottom-left-text">
+			<h3 ><span id="lefthspan"></span></h3>
+			<p id="leftp"></p>
+<!--  			
+				<h3><span>力量性锻炼的部位选择</span></h3>
+				<p>①脂肪蓄积在腹部者，主要是进行仰卧起坐、双腿伸直抬高及抗阻性抬腿运动等，每个动作做20次。<br>
+                   ②脂肪蓄积在肩、胸、背部者，可做哑铃操及拉力器练习等。</p>
+			</div>
+			<div class="banner-bottom-left-text middle">
+				<h3>冬季减肥健美<span>锻炼方案</span></h3>
+				<p> （1）运动项目：步行、慢跑、有氧健身操、自行车、游泳、乒乓球、网球等。 <br>
+                    （2）运动强度：慢跑的速度开始由100至110米/分钟，逐渐增加到120至130米/分钟。运动时心率控制在50岁130次/分钟；60岁120次/分钟以内为宜。 <br>
+                    （3）运动时间与频度：每次30至40分钟、每周3至5次。 </p>
+			</div>
+			<div class="banner-bottom-left-text">
+				<h3><span>注意事项</span></h3>
+				<p>①锻炼前应做医学检查，判定心功状况及有无心血管系统合并症。 <br>
+                   ②运动疗法必须和控制饮食相结合，主要是控制脂肪、糖类及食量。 <br>
+                   ③力量锻炼主要是锻炼躯干和四肢大肌肉群，用力程度逐渐增加。</p>
+-->	
+			</div>
+				<div class="read-more">	
+					<a href="#" class="rd-mr  rd-mr-1f" id="lefta" style="color:white;border-color:white;">Go To The Page</a>		
+				</div>
+		</div>
+		<div class="col-md-6 banner-bottom-right">
+			<div class="starting-text">
+			<!--
+				<h4>初级、中级、高级健身计划制定方案</h4>
+				<p>不论你是初学者，还是中、高级水平的健美运动员，都必须根据自己的实际状况和训练水平， 科学地安排训练，逐步调整和加大运动量。其中包括：采取什么样的分化训练方案；如何安排循环训练周期；每次训练课练哪几个部位；每个部位练几个动作；每个动作练几组；每组练几次；每组之间间...</p>
+			 -->
+			    <h4 id="right1h4"></h4>
+			    <p id="right1p"></p>
+				<div class="read-more">	
+					<a href="#" class="rd-mr  rd-mr-1f" id="right1a">Go To The Page</a>
+				</div>
+			</div>
+			<div class="dummy-text banner-bottom-left-text">
+			<!--  
+				<h4 style="color:Orange"> 职业健美运动员谈手臂锻炼 </h4>
+				<p>手臂训练重要吗？当然重要，而且是非常重要！今天跟大家分享一篇来自两位职业健美选手马丁内兹(以下对话用VM简称)及罗利.温克拉（以下对话用RW简称）对于二头肌及三头肌训练的心得，很有用的！...</p>
+			-->
+			    <h4 id="right2h4" style="color:Orange"></h4>
+			    <p id="right2p"></p>
+				<div class="read-more">	
+					<a href="#" class="rd-mr  rd-mr-1f" id="right2a">Go To The Page</a>		
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+	<div class="design">
+		<div class="col-md-4 design-left">
+			<h3>Jogging<span>Dog</span></h3>
+            <div style="padding">
+                <img src="images/logo.gif" alt=""/>
+            </div>
+            <br>
+			<span class="my" >A website</span>
+			<lable>you can get healthy information</lable>
+		</div>
+		<div class="col-md-8 design-right">
+			<h3><span>留下您宝贵的意见：</span></h3>
+			<form>
+				<input type="text" value="Your Name" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Your Name';}" required="">
+				<input type="text" value="Your Mail" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Your Mail';}" required="">
+				<textarea type="text"  onfocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Your Advice ...';}" required="">Your Advice ...</textarea>
+				<input type="button" value="Submit" >
+			</form>
+			<p>Stay Connnected With Us...</p>
+			<div class="social-icons">
+				<ul>
+					<li><a href="#"> </a></li>
+					<li><a href="#" class="drbl"> </a></li>
+					<li><a href="#" class="twit"> </a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+	<!--smooth-scrolling-of-move-up-->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$().UItoTop({ easingType: 'easeOutQuart' });	
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!--//smooth-scrolling-of-move-up-->
+	<script type="text/javascript">
+	$.post("HealthpassageServlet?page=passagelist",{},function(data){
+		var list = JSON.parse(data);
+		
+		$("#lefthspan").html(list[0].left.title);
+		if(list[0].right1.passage.length>500){
+			$("#leftp").html(list[0].left.passage.substring(0,500)+"...");
+		}else{
+			$("#leftp").html(list[0].left.passage);
+		}
+		$("#lefta").click(function(){
+			location.href="healthpassage.html?id="+list[0].left.number;
+		});
+		
+		$("#right1h4").html(list[0].right1.title);
+		if(list[0].right1.passage.length>200){
+			$("#right1p").html(list[0].right1.passage.substring(0,200)+"...");
+		}else{
+			$("#right1p").html(list[0].right1.passage);
+		}
+		$("#right1a").click(function(){
+			location.href="healthpassage.html?id="+list[0].right1.number;
+		});
+		
+		
+		$("#right2h4").html(list[0].right2.title);		
+		if(list[0].right2.passage.length>200){
+			$("#right2p").html(list[0].right2.passage.substring(0,200)+"...");
+		}else{
+			$("#right2p").html(list[0].right2.passage);
+		}
+		$("#right2a").click(function(){
+			location.href="healthpassage.html?id="+list[0].right2.number;
+		});
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>EchartRadarTest</title>
+</head>
+<body>
+<div id="main" style="height: 400px;"></div>
+
+<script src="./js/dist/echarts.js"></script>
+<script type="text/javascript">
+    require.config({
+        paths: {
+            echarts: './js/dist'
+        }
+    });
+    require(
+            [
+                'echarts',
+                'echarts/chart/radar'
+            ],
+            function (ec) {
+                var myChart = ec.init(document.getElementById('main'),'shine');
+                var option = {
+                    title: {
+                        text: '韩硕',
+                        subtext: '个人体侧雷达分布'
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    legend: {
+                        x: 'center',
+                        data: ['体质测试成绩']
+                    },
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            mark: {show: true},
+                            dataView: {show: true, readOnly: false},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    calculable: true,
+                    polar: [
+                        {
+                            indicator: [
+                                {text: '短跑', max: 100},
+                                {text: '体脂率', max: 100},
+                                {text: '引体向上/仰卧起坐', max: 100},
+                                {text: '长跑', max: 100},
+                                {text: '跳远', max: 100}
+                            ],
+                            radius: 130
+                        }
+                    ],
+                    series: [
+                        {
+                            name: '个人体侧雷达分布',
+                            type: 'radar',
+                            itemStyle: {
+                                normal: {
+                                    areaStyle: {
+                                        type: 'default'
+                                    }
+                                }
+                            },
+                            data: [
+                                {
+                                    value: [75, 60, 55, 95, 80],
+                                    name: '体质测试成绩'
+                                }
+                            ]
+                        }
+                    ]
+
+                }
+                myChart.setOption(option);
+            }
+    );
+</script>
+</body>
+</html>

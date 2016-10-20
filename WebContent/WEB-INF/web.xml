@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>JoggingDog</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ReceiveMsgServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.ReceiveMsgServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReceiveMsgServlet</servlet-name>
+    <url-pattern>/ReceiveMsgServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ToHavePlanServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.ToHavePlanServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ToHavePlanServlet</servlet-name>
+    <url-pattern>/ToHavePlanServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>FJNUServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.FJNUServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FJNUServlet</servlet-name>
+    <url-pattern>/FJNUServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>PresentServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.PresentServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PrimaryChangeServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.changeBody.PrimaryChangeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MiddleChangeServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.changeBody.MiddleChangeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>HighChangeServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.changeBody.HighChangeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SendUserTypeServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.getEchart.SendUserTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SendMiddleGradeServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.getEchart.SendMiddleGradeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MiddleInfoServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.getEchart.MiddleInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SendHighGradeServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.getEchart.SendHighGradeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>HighInfoServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.getEchart.HighInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SendPrimaryGradeServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.getEchart.SendPrimaryGradeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PrimaryInfoServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.getEchart.PrimaryInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my Android component</description>
+    <display-name>This is the display name of my Android component</display-name>
+    <servlet-name>AndroidLoginServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.ForAndroid.AndroidLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my Android component</description>
+    <display-name>This is the display name of my Android component</display-name>
+    <servlet-name>ActionDescribeServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.ForAndroid.ActionDescribeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my Android component</description>
+    <display-name>This is the display name of my Android component</display-name>
+    <servlet-name>AddFootNumberServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.ForAndroid.AddFootNumberServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my Android component</description>
+    <display-name>This is the display name of my Android component</display-name>
+    <servlet-name>HealthEatServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.ForAndroid.HealthEatServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my Android component</description>
+    <display-name>This is the display name of my Android component</display-name>
+    <servlet-name>GedoonServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.ForAndroid.GedoonServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my Android component</description>
+    <display-name>This is the display name of my Android component</display-name>
+    <servlet-name>AndroidChangeBodyServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.ForAndroid.AndroidChangeBodyServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my Android component</description>
+    <display-name>This is the display name of my Android component</display-name>
+    <servlet-name>AndroidHealthPlanServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.ForAndroid.AndroidHealthPlanServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my Android component</description>
+    <display-name>This is the display name of my Android component</display-name>
+    <servlet-name>IsHaveGodoon</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.ForAndroid.IsHaveGodoon</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my Android component</description>
+    <display-name>This is the display name of my Android component</display-name>
+    <servlet-name>IsChangeBody</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.ForAndroid.IsChangeBody</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my Android component</description>
+    <display-name>This is the display name of my Android component</display-name>
+    <servlet-name>AndroidRegisterServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.ForAndroid.AndroidRegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my Android component</description>
+    <display-name>This is the display name of my Android component</display-name>
+    <servlet-name>IsOperatedServlet</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.IsOperatedServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my Android component</description>
+    <display-name>This is the display name of my Android component</display-name>
+    <servlet-name>ReturnFootNumber</servlet-name>
+    <servlet-class>edu.fjnu.Servlet.ForAndroid.ReturnFootNumber</servlet-class>
+  </servlet>
+
+
+
+
+
+
+    <servlet-mapping>
+        <servlet-name>PresentServlet</servlet-name>
+        <url-pattern>/PresentServlet</url-pattern>
+    </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PrimaryChangeServlet</servlet-name>
+    <url-pattern>/PrimaryChangeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MiddleChangeServlet</servlet-name>
+    <url-pattern>/MiddleChangeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HighChangeServlet</servlet-name>
+    <url-pattern>/HighChangeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SendUserTypeServlet</servlet-name>
+    <url-pattern>/SendUserTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SendMiddleGradeServlet</servlet-name>
+    <url-pattern>/SendMiddleGradeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MiddleInfoServlet</servlet-name>
+    <url-pattern>/MiddleInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SendHighGradeServlet</servlet-name>
+    <url-pattern>/SendHighGradeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HighInfoServlet</servlet-name>
+    <url-pattern>/HighInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SendPrimaryGradeServlet</servlet-name>
+    <url-pattern>/SendPrimaryGradeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PrimaryInfoServlet</servlet-name>
+    <url-pattern>/PrimaryInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AndroidLoginServlet</servlet-name>
+    <url-pattern>/AndroidLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ActionDescribeServlet</servlet-name>
+    <url-pattern>/ActionDescribeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddFootNumberServlet</servlet-name>
+    <url-pattern>/AddFootNumberServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HealthEatServlet</servlet-name>
+    <url-pattern>/HealthEatServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GedoonServlet</servlet-name>
+    <url-pattern>/GedoonServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AndroidChangeBodyServlet</servlet-name>
+    <url-pattern>/AndroidChangeBodyServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AndroidHealthPlanServlet</servlet-name>
+    <url-pattern>/AndroidHealthPlanServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IsHaveGodoon</servlet-name>
+    <url-pattern>/IsHaveGodoon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IsChangeBody</servlet-name>
+    <url-pattern>/IsChangeBody</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AndroidRegisterServlet</servlet-name>
+    <url-pattern>/AndroidRegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IsOperatedServlet</servlet-name>
+    <url-pattern>/IsOperatedServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ReturnFootNumber</servlet-name>
+    <url-pattern>/ReturnFootNumber</url-pattern>
+  </servlet-mapping>
+
+ <!-- 过滤请求与响应编码-->
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>edu.fjnu.filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+</web-app>

@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+<head>
+	<title>修改体测信息</title>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/component.css" rel="stylesheet" type="text/css"  />
+	<!--web-font-->
+<!--
+	<link href='http://fonts.useso.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
+-->
+	<!--//web-font-->
+	<!-- Custom Theme files -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--	<script src="http://ajax.useso.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+	<!-- //Custom Theme files -->
+	<!-- js -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/modernizr.custom.js"></script>
+	<!-- //js -->	
+	<!-- start-smoth-scrolling-->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>	
+	<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	</script>
+	<!--//end-smoth-scrolling-->
+	
+    <script src="js/modernizr.custom.js"></script>
+		
+
+</head>
+<body class="cbp-spmenu-push">
+	<div class="banner">
+		<div class="col-md-8 banner-left">
+			<img src="images/banner.jpg" alt=""/>
+		</div>
+		<div class="col-md-4 banner-right">
+			<div class="top-nav">
+				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+					<h3>Menu</h3>
+					<a href="loginIndex.html">主页</a>
+					<a href="Login.html">登录注册</a>
+					<a href="HealthEat.html">饮食推荐</a>
+					<a href="GetCodoon.html">绑定咕咚账号</a>
+					<a href="TestBodyFat.html">查看健康信息</a>
+					<a href="SendPlan.html">健身方案推荐</a>
+					<a href="" class="active">修改体测信息</a>
+					<a href="actionInstruction.html">健身资料说明库</a>
+				</nav>
+				<div class="main buttonset">	
+						<!-- Class "cbp-spmenu-open" 被应用于 "cbp-spmenu-push-toleft" 或者 "cbp-spmenu-push-toright" 在主体上 -->
+						<button id="showRightPush"><img src="images/menu-icon.png" alt=""/></button>
+						<!--<span class="menu"></span>-->
+				</div>
+				<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
+				<script src="js/classie.js"></script>
+				<script>
+				var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+				showRightPush = document.getElementById( 'showRightPush' ),
+				body = document.body;
+
+				showRightPush.onclick = function() {
+					classie.toggle( this, 'active' );
+					classie.toggle( body, 'cbp-spmenu-push-toleft' );
+					classie.toggle( menuRight, 'cbp-spmenu-open' );
+					disableOther( 'showRightPush' );
+				};
+
+				function disableOther( button ) {
+					if( button !== 'showRightPush' ) {
+						classie.toggle( showRightPush, 'disabled' );
+					}
+				}
+			</script>
+			<!-- 菜单脚本结束 -->
+			</div>	
+			<h1>修改体测数据</h1>
+			<br>
+			<p>Jogging Dog为用户提供了修改体测信息的界面。您可以通过对体测信息的修改，让Jogging Dog为您推荐的方案更加的准确。在您完成最近推荐的方案的时，欢迎来此修改您的最新信息。我们会实时为您做最个性化的推荐呢!</p>
+			<p class="bnr-top"><span style="font-weight:bold">提示：</span>修改信息要真实可靠，以免过量的运动对您的身体带来损伤。</p>
+		</div>	
+		<div class="clearfix"> </div>
+	</div>
+	<div class="design">
+		<div id="changeBodyDL" class="col-md-4 design-left">
+			<h3>Jogging<span>Dog</span></h3>
+            <div style="padding">
+                <img src="images/logo.gif" alt=""/>
+            </div>
+            <br>
+			<span class="my" >A website</span>
+			<lable>you can get healthy information</lable>
+		</div>
+		<div class="col-md-8 design-right">
+			<h3><span>锻炼后您的新成绩：</span></h3>
+			<form>
+				<select id="userType" class="design-select">
+                  <option value="1">您现在的学习情况：</option>
+                  <option value="primary">小学</option>
+                  <option value="middle">初中</option>
+                  <option value="high">高中</option>
+                  <option value="university">大学</option>
+                  <option value="graduate">研究生</option>
+                </select><br>
+                <div id="userPart"></div>
+			</form>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+	<!--smooth-scrolling-of-move-up-->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$().UItoTop({ easingType: 'easeOutQuart' });	
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!--//smooth-scrolling-of-move-up-->
+	<script src="js/jquery-2.1.3.min.js"></script>
+	<script>
+	$(document).ready(function(){ 
+          $("#userType").bind("change",function(){ 
+              var type = $("#userType").val();
+              if(type == "primary"){
+                  $("#userPart").empty();
+                  var part = '<input id="height" type="text" value="身高：(m)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'身高：(m)\';}" required="">' + 
+				'<input id="weight" type="text" value="体重：(kg)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'体重：(kg)\';}" required="">' + 
+				'<input id="FVC" type="text" value="肺活量：(cc)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'肺活量：(cc)\';}" required="">' + 
+				'<input id="age" type="text" value="年龄：(岁)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'年龄：(岁)\';}" required="">' + 
+				'<input id="skipRope" type="text" value="跳绳：(个)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'跳绳：(个)\';}" required="">' +
+				'<input id="shortRun" type="text" value="50米：(s)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'50米：(s)\';}" required="">' +
+				'<input id="sitAndReach" type="text" value="坐立体前屈：(cm)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'坐立体前屈：(cm)\';}" required="">' +  
+				'<br><input id="change" type="button" value="修改" >';
+                  $("#userPart").append(part);
+              }else if(type == "middle"){
+                  $("#userPart").empty();
+                  var part = '<input id="height" type="text" value="身高：(m)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'身高：(m)\';}" required="">' + 
+				'<input id="weight" type="text" value="体重：(kg)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'体重：(kg)\';}" required="">' + 
+				'<input id="pullUp" type="text" value="引体向上(仰卧起坐)：(个)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'引体向上(仰卧起坐)：(个)\';}" required="">' + 
+				'<input id="age" type="text" value="年龄：(岁)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'年龄：(岁)\';}" required="">' + 
+				'<input id="skipRope" type="text" value="跳绳：(个)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'跳绳：(个)\';}" required="">' +
+				'<input id="benchTest" type="text" value="台阶测试：(个)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'台阶测试：(个)\';}" required="">' +
+				'<input id="sitAndReach" type="text" value="坐立体前屈：(cm)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'坐立体前屈：(cm)\';}" required="">' +  
+				'<br><input id="change" type="button" value="修改" >';
+                  $("#userPart").append(part);
+              }else if(type == "high"){
+                  $("#userPart").empty();
+                  var part = '<input id="height" type="text" value="身高：(m)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'身高：(m)\';}" required="">' + 
+				'<input id="weight" type="text" value="体重：(kg)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'体重：(kg)\';}" required="">' + 
+				'<input id="benchTest" type="text" value="台阶测试：(个)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'台阶测试：(个)\';}" required="">' + 
+				'<input id="age" type="text" value="年龄：(岁)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'年龄：(岁)\';}" required="">' + 
+				'<input id="longRun" type="text" value="1000米(800米)：(分.秒)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'1000米(800米)：(分.秒)\';}" required="">' +
+				'<input id="throwBall" type="text" value="掷实心球：(m)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'掷实心球：(m)\';}" required="">' +
+				'<input id="sitAndReach" type="text" value="坐立体前屈：(cm)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'坐立体前屈：(cm)\';}" required="">' +  
+				'<br><input id="change" type="button" value="修改" >';
+                  $("#userPart").append(part);
+              }else if(type == "university"){
+                  $("#userPart").empty();
+                  var part = '<input id="height" type="text" value="身高：(m)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'身高：(m)\';}" required="">' + 
+				'<input id="weight" type="text" value="体重：(kg)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'体重：(kg)\';}" required="">' + 
+				'<input id="jump" type="text" value="立定跳远：(cm)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'立定跳远：(cm)\';}" required="">' + 
+				'<input id="age" type="text" value="年龄：(岁)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'年龄：(岁)\';}" required="">' + 
+				'<input id="longRun" type="text" value="1000米(800米)：(分.秒)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'1000米(800米)：(分.秒)\';}" required="">' +
+				'<input id="shortRun" type="text" value="50米：(s)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'50米：(s)\';}" required="">' +
+				'<input id="pullUp" type="text" value="引体向上(仰卧起坐)：(个)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'引体向上（仰卧起坐）：(个)\';}" required="">' +  
+				'<br><input id="change" type="button" value="修改" >';
+                  $("#userPart").append(part);
+              }else if(type == "graduate"){
+                  $("#userPart").empty();
+                  var part = '<input id="height" type="text" value="身高：(m)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'身高：(m)\';}" required="">' + 
+				'<input id="weight" type="text" value="体重：(kg)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'体重：(kg)\';}" required="">' + 
+				'<input id="jump" type="text" value="立定跳远：(cm)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'立定跳远：(cm)\';}" required="">' + 
+				'<input id="age" type="text" value="年龄：(岁)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'年龄：(岁)\';}" required="">' + 
+				'<input id="longRun" type="text" value="1000米(800米)：(分.秒)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'1000米(800米)：(分.秒)\';}" required="">' +
+				'<input id="shortRun" type="text" value="50米：(s)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'50米：(s)\';}" required="">' +
+				'<input id="pullUp" type="text" value="引体向上（仰卧起坐）：(个)" onFocus="this.value = \'\';" onBlur="if (this.value == \'\') {this.value = \'引体向上（仰卧起坐）：(个)\';}" required="">' +  
+				'<br><input id="change" type="button" value="修改" >';
+                  $("#userPart").append(part);
+              }else{
+                  $("#userPart").empty();
+              }
+            $("#change").click(function(event){
+                var type = $("#userType").val();
+                if(type == "university" || type == "graduate"){
+                    var height = $("#height").val();
+                    var weight = $("#weight").val();
+                    var jump = $("#jump").val();
+                    var age = $("#age").val();
+                    var longRun = $("#longRun").val();
+                    var shortRun = $("#shortRun").val();
+                    var pullUp = $("#pullUp").val();
+                    //var pulmonary = $("#pulmonary").val();
+                    $.post("FJNUServlet",{"page":"ChangeBody","type":type,"height":height,"weight":weight,"jump":jump,"age":age,"longRun":longRun,"shortRun":shortRun,"pullUp":pullUp},function(data){
+                        alert("修改成功!");
+                    });  
+                }else if(type == "high"){
+                    var height = $("#height").val();
+                    var weight = $("#weight").val();
+                    var benchTest = $("#benchTest").val();
+                    var age = $("#age").val();
+                    var longRun = $("#longRun").val();
+                    var throwBall = $("#throwBall").val();
+                    var sitAndReach = $("#sitAndReach").val();
+                    $.post("HighChangeServlet",{"height":height,"weight":weight,"benchTest":benchTest,"age":age,"longRun":longRun,"throwBall":throwBall,"sitAndReach":sitAndReach},function(data){
+                        alert("修改成功!");
+                    });
+                }else if(type == "middle"){
+                    var height = $("#height").val();
+                    var weight = $("#weight").val();
+                    var benchTest = $("#benchTest").val();
+                    var age = $("#age").val();
+                    var pullUp = $("#pullUp").val();
+                    var skipRope = $("#skipRope").val();
+                    var sitAndReach = $("#sitAndReach").val();
+                    $.post("MiddleChangeServlet",{"height":height,"weight":weight,"benchTest":benchTest,"age":age,"pullUp":pullUp,"skipRope":skipRope,"sitAndReach":sitAndReach},function(data){
+                        alert("修改成功!");
+                    });
+                }else if(type == "primary"){
+                    var height = $("#height").val();
+                    var weight = $("#weight").val();
+                    var shortRun = $("#shortRun").val();
+                    var age = $("#age").val();
+                    var FVC = $("#FVC").val();
+                    var skipRope = $("#skipRope").val();
+                    var sitAndReach = $("#sitAndReach").val();
+                    $.post("PrimaryChangeServlet",{"height":height,"weight":weight,"shortRun":shortRun,"age":age,"FVC":FVC,"skipRope":skipRope,"sitAndReach":sitAndReach},function(data){
+                        alert("修改成功!");
+                    });
+                }else {
+                    alert("未知的错误！");
+                }      
+            });
+          });
+        });
+//        $(function(){
+//            //正确完工
+//            $("#change").click(function(event){
+//                var height = $("#height").val();
+//                var weight = $("#weight").val();
+//                var jump = $("#jump").val();
+//                var age = $("#age").val();
+//                var longRun = $("#longRun").val();
+//                var shortRun = $("#shortRun").val();
+//                var pullUp = $("#pullUp").val();
+//                var pulmonary = $("#pulmonary").val();
+//                $.post("FJNUServlet",{"page":"ChangeBody","height":height,"weight":weight,"jump":jump,"age":age,"longRun":longRun,"shortRun":shortRun,"pullUp":pullUp,"pulmonary":pulmonary},function(data){
+//                    alert("修改成功!");
+//                });  
+//            });
+//        });
+    </script>
+	
+</body>
+</html>

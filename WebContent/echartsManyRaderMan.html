@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div id="main" style="height: 400px;"></div>
+<div id="longrun" style="height: 400px;"></div>
+<div id="shortrun" style="height: 400px;"></div>
+<div id="jump" style="height: 400px;"></div>
+<div id="up" style="height: 400px;"></div>
+
+
+<script src="./js/dist/echarts.js"></script>
+
+<script type="text/javascript">
+    require.config({
+        paths: {
+            echarts: './js/dist'
+        }
+    });
+    require(
+            [
+                'echarts',
+                'echarts/chart/radar'
+            ],
+            function (mn) {
+                var myChart = mn.init(document.getElementById('main'),'shine');
+                var option = {
+                    title: {
+                        text: '韩硕',
+                        subtext: '个人体侧雷达分布'
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    legend: {
+                        x: 'center',
+                        data: ['体质测试成绩']
+                    },
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            mark: {show: false},
+                            dataView: {show: true, readOnly: true},
+                            restore: {show: false},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    calculable: true,
+                    polar: [
+                        {
+                            indicator: [
+                                {text: '短跑', max: 100},
+                                {text: '体脂率', max: 100},
+                                {text: '引体向上', max: 100},
+                                {text: '长跑', max: 100},
+                                {text: '跳远', max: 100}
+                            ],
+                            radius: 130
+                        }
+                    ],
+                    series: [
+                        {
+                            name: '个人体侧雷达分布',
+                            type: 'radar',
+                            itemStyle: {
+                                normal: {
+                                    areaStyle: {
+                                        type: 'default'
+                                    }
+                                }
+                            },
+                            data: [
+                                {
+                                    value: [0, 0, 0, 0, 0],
+                                    name: '体质测试成绩'
+                                }
+                            ]
+                        }
+                    ]
+                }
+                option.series[0].data[0].value = [90,85,65,75,50];
+                myChart.setOption(option);
+            }
+    );
+</script>
+
+<script type="text/javascript">
+    require.config({
+        paths: {
+            echarts: './js/dist'
+        }
+    });
+    require(
+            [
+                'echarts',
+                'echarts/chart/gauge'
+            ],
+            function (lr) {
+                var myChart = lr.init(document.getElementById('longrun'));
+                var option = {
+                    tooltip: {
+                        formatter: "{a} <br/>{b} : {c}"
+                    },
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            mark: {show: false},
+                            restore: {show: false},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    series: [
+                        {
+                            name: '1000m长跑成绩',
+                            type: 'gauge',
+                            center: ['50%', '50%'],    // 默认全局居中
+                            radius: [0, '75%'],
+                            startAngle: 140,
+                            endAngle: -140,
+                            min: 3.10,                     // 最小值
+                            max: 6.10,                   // 最大值
+                            precision: 4,               // 小数精度，默认为0，无小数点
+                            splitNumber: 60,             // 分割段数，默认为5
+                            axisLine: {            // 坐标轴线
+                                show: true,        // 默认显示，属性show控制显示与否
+                                lineStyle: {       // 属性lineStyle控制线条样式
+                                    color: [[0.0338, 'lightgreen'], [0.0847, 'orange'], [0.3898, 'skyblue'], [1, '#ff4500']],
+                                    width: 30
+                                }
+                            },
+                            axisTick: {            // 坐标轴小标记
+                                show: false,        // 属性show控制显示与否，默认不显示
+                                splitNumber: 5,    // 每份split细分多少段
+                                length: 8,         // 属性length控制线长
+                                lineStyle: {       // 属性lineStyle控制线条样式
+                                    color: '#eee',
+                                    width: 1,
+                                    type: 'solid'
+                                }
+                            },
+                            axisLabel: {           // 坐标轴文本标签，详见axis.axisLabel
+                                show: true,
+                                formatter: function (v) {
+                                    switch (v + '') {
+                                        case '3.15':
+                                            return '3\'15\'\'';
+                                        case '3.25':
+                                            return '3\'25\'\'';
+                                        case '3.45':
+                                            return '3\'45\'\'';
+                                        case '4.35':
+                                            return '4\'30\'\'';
+                                        case '4.55':
+                                            return '4\'50\'\'';
+                                        case '6.05':
+                                            return '6\'10\'\''
+                                        default:
+                                            return '';
+                                    }
+                                },
+                                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    color: '#333'
+                                }
+                            },
+                            splitLine: {           // 分隔线
+                                show: true,        // 默认显示，属性show控制显示与否
+                                length: 30,         // 属性length控制线长
+                                lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                                    color: '#eee',
+                                    width: 2,
+                                    type: 'solid'
+                                }
+                            },
+                            pointer: {
+                                length: '80%',
+                                width: 8,
+                                color: 'auto'
+                            },
+                            title: {
+                                show: true,
+                                offsetCenter: ['-65%', -10],       // x, y，单位px
+                                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    color: '#333',
+                                    fontSize: 15
+                                }
+                            },
+                            detail: {
+                                show: true,
+                                backgroundColor: 'rgba(0,0,0,0)',
+                                borderWidth: 0,
+                                borderColor: '#ccc',
+                                width: 100,
+                                height: 40,
+                                offsetCenter: ['-60%', 10],       // x, y，单位px
+                                formatter: '{value}',
+                                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    color: 'auto',
+                                    fontSize: 30
+                                }
+                            },
+                            data: [{value: 0, name: '1000米长跑成绩(分.秒)'}]
+                        }
+                    ]
+                };
+                option.series[0].data[0].value = 4.10;
+                myChart.setOption(option);
+            }
+    );
+</script>
+<script type="text/javascript">
+    require.config({
+        paths: {
+            echarts: './js/dist'
+        }
+    });
+    require(
+            [
+                'echarts',
+                'echarts/chart/gauge'
+            ],
+            function(sr){
+                var myChart = sr.init(document.getElementById('shortrun'));
+                var option = {
+                    tooltip: {
+                        formatter: "{a} <br/>{b} : {c}"
+                    },
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            mark: {show: false},
+                            restore: {show: false},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    series: [
+                        {
+                            name: '50m短跑成绩',
+                            type: 'gauge',
+                            center: ['50%', '50%'],    // 默认全局居中
+                            radius: [0, '75%'],
+                            startAngle: 140,
+                            endAngle: -140,
+                            min: 6.5,                     // 最小值
+                            max: 10.0,                   // 最大值
+                            precision: 4,               // 小数精度，默认为0，无小数点
+                            splitNumber: 70,             // 分割段数，默认为5
+                            axisLine: {            // 坐标轴线
+                                show: true,        // 默认显示，属性show控制显示与否
+                                lineStyle: {       // 属性lineStyle控制线条样式
+                                    color: [[0.08, 'lightgreen'], [0.14, 'orange'], [0.71, 'skyblue'], [1, '#ff4500']],
+                                    width: 30
+                                }
+                            },
+                            axisTick: {            // 坐标轴小标记
+                                show: false,        // 属性show控制显示与否，默认不显示
+                                splitNumber: 5,    // 每份split细分多少段
+                                length: 8,         // 属性length控制线长
+                                lineStyle: {       // 属性lineStyle控制线条样式
+                                    color: '#eee',
+                                    width: 1,
+                                    type: 'solid'
+                                }
+                            },
+                            axisLabel: {           // 坐标轴文本标签，详见axis.axisLabel
+                                show: true,
+                                formatter: function (v) {
+                                    switch (v + '') {
+                                        case '6.6':
+                                            return '6.6s';
+                                        case '6.8':
+                                            return '6.8s';
+                                        case '7':
+                                            return '7.0s';
+                                        case '9':
+                                            return '9.0s';
+                                        case '10':
+                                            return '10.0s'
+                                        default:
+                                            return '';
+                                    }
+                                },
+                                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    color: '#333'
+                                }
+                            },
+                            splitLine: {           // 分隔线
+                                show: true,        // 默认显示，属性show控制显示与否
+                                length: 30,         // 属性length控制线长
+                                lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                                    color: '#eee',
+                                    width: 2,
+                                    type: 'solid'
+                                }
+                            },
+                            pointer: {
+                                length: '80%',
+                                width: 8,
+                                color: 'auto'
+                            },
+                            title: {
+                                show: true,
+                                offsetCenter: ['-65%', -10],       // x, y，单位px
+                                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    color: '#333',
+                                    fontSize: 15
+                                }
+                            },
+                            detail: {
+                                show: true,
+                                backgroundColor: 'rgba(0,0,0,0)',
+                                borderWidth: 0,
+                                borderColor: '#ccc',
+                                width: 100,
+                                height: 40,
+                                offsetCenter: ['-60%', 10],       // x, y，单位px
+                                formatter: '{value}',
+                                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    color: 'auto',
+                                    fontSize: 30
+                                }
+                            },
+                            data: [{value: 0, name: '50m短跑成绩(s)'}]
+                        }
+                    ]
+                };
+                option.series[0].data[0].value = 7.3;
+                myChart.setOption(option);
+            }
+    );
+</script>
+<script type="text/javascript">
+    require.config({
+        paths: {
+            echarts: './js/dist'
+        }
+    });
+    require(
+            [
+                'echarts',
+                'echarts/chart/gauge'
+            ],
+            function(jp){
+                var myChart = jp.init(document.getElementById('jump'));
+                var option = {
+                    tooltip: {
+                        formatter: "{a} <br/>{b} : {c}"
+                    },
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            mark: {show: false},
+                            restore: {show: false},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    series: [
+                        {
+                            name: '立定跳远成绩',
+                            type: 'gauge',
+                            center: ['50%', '50%'],    // 默认全局居中
+                            radius: [0, '75%'],
+                            startAngle: 140,
+                            endAngle: -140,
+                            min: 185,                     // 最小值
+                            max: 275,                   // 最大值
+                            precision: 4,               // 小数精度，默认为0，无小数点
+                            splitNumber: 90,             // 分割段数，默认为5
+                            axisLine: {            // 坐标轴线
+                                show: true,        // 默认显示，属性show控制显示与否
+                                lineStyle: {       // 属性lineStyle控制线条样式
+                                    color: [[0.27, 'lightgreen'], [0.72, 'orange'], [0.89, 'skyblue'], [1, '#ff4500']],
+                                    width: 30
+                                }
+                            },
+                            axisTick: {            // 坐标轴小标记
+                                show: false,        // 属性show控制显示与否，默认不显示
+                                splitNumber: 5,    // 每份split细分多少段
+                                length: 8,         // 属性length控制线长
+                                lineStyle: {       // 属性lineStyle控制线条样式
+                                    color: '#eee',
+                                    width: 1,
+                                    type: 'solid'
+                                }
+                            },
+                            axisLabel: {           // 坐标轴文本标签，详见axis.axisLabel
+                                show: true,
+                                formatter: function (v) {
+                                    switch (v + '') {
+                                        case '185':
+                                            return '185cm';
+                                        case '210':
+                                            return '210cm';
+                                        case '250':
+                                            return '250cm';
+                                        case '265':
+                                            return '265cm';
+                                        case '275':
+                                            return '275cm'
+                                        default:
+                                            return '';
+                                    }
+                                },
+                                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    color: '#333'
+                                }
+                            },
+                            splitLine: {           // 分隔线
+                                show: true,        // 默认显示，属性show控制显示与否
+                                length: 30,         // 属性length控制线长
+                                lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                                    color: '#eee',
+                                    width: 2,
+                                    type: 'solid'
+                                }
+                            },
+                            pointer: {
+                                length: '80%',
+                                width: 8,
+                                color: 'auto'
+                            },
+                            title: {
+                                show: true,
+                                offsetCenter: ['-65%', -10],       // x, y，单位px
+                                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    color: '#333',
+                                    fontSize: 15
+                                }
+                            },
+                            detail: {
+                                show: true,
+                                backgroundColor: 'rgba(0,0,0,0)',
+                                borderWidth: 0,
+                                borderColor: '#ccc',
+                                width: 100,
+                                height: 40,
+                                offsetCenter: ['-60%', 10],       // x, y，单位px
+                                formatter: '{value}',
+                                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    color: 'auto',
+                                    fontSize: 30
+                                }
+                            },
+                            data: [{value: 0, name: '立定跳远距离(cm)'}]
+                        }
+                    ]
+                };
+                option.series[0].data[0].value = 235;
+                myChart.setOption(option);
+            }
+    );
+</script>
+<script type="text/javascript">
+    require.config({
+        paths: {
+            echarts: './js/dist'
+        }
+    });
+    require(
+            [
+                'echarts',
+                'echarts/chart/gauge'
+            ],
+            function(up){
+                var myChart = up.init(document.getElementById('up'));
+                var option = {
+                    tooltip: {
+                        formatter: "{a} <br/>{b} : {c}"
+                    },
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            mark: {show: false},
+                            restore: {show: false},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    series: [
+                        {
+                            name: '引体向上成绩',
+                            type: 'gauge',
+                            center: ['50%', '50%'],    // 默认全局居中
+                            radius: [0, '75%'],
+                            startAngle: 140,
+                            endAngle: -140,
+                            min: 5,                     // 最小值
+                            max: 20,                   // 最大值
+                            precision: 4,               // 小数精度，默认为0，无小数点
+                            splitNumber: 15,             // 分割段数，默认为5
+                            axisLine: {            // 坐标轴线
+                                show: true,        // 默认显示，属性show控制显示与否
+                                lineStyle: {       // 属性lineStyle控制线条样式
+                                    color: [[0.33, 'lightgreen'], [0.67, 'orange'], [0.8, 'skyblue'], [1, '#ff4500']],
+                                    width: 30
+                                }
+                            },
+                            axisTick: {            // 坐标轴小标记
+                                show: false,        // 属性show控制显示与否，默认不显示
+                                splitNumber: 5,    // 每份split细分多少段
+                                length: 8,         // 属性length控制线长
+                                lineStyle: {       // 属性lineStyle控制线条样式
+                                    color: '#eee',
+                                    width: 1,
+                                    type: 'solid'
+                                }
+                            },
+                            axisLabel: {           // 坐标轴文本标签，详见axis.axisLabel
+                                show: true,
+                                formatter: function (v) {
+                                    switch (v + '') {
+                                        case '5':
+                                            return '5个';
+                                        case '10':
+                                            return '10个';
+                                        case '15':
+                                            return '15个';
+                                        case '17':
+                                            return '17个';
+                                        case '20':
+                                            return '20个'
+                                        default:
+                                            return '';
+                                    }
+                                },
+                                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    color: '#333'
+                                }
+                            },
+                            splitLine: {           // 分隔线
+                                show: true,        // 默认显示，属性show控制显示与否
+                                length: 30,         // 属性length控制线长
+                                lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                                    color: '#eee',
+                                    width: 2,
+                                    type: 'solid'
+                                }
+                            },
+                            pointer: {
+                                length: '80%',
+                                width: 8,
+                                color: 'auto'
+                            },
+                            title: {
+                                show: true,
+                                offsetCenter: ['-65%', -10],       // x, y，单位px
+                                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    color: '#333',
+                                    fontSize: 15
+                                }
+                            },
+                            detail: {
+                                show: true,
+                                backgroundColor: 'rgba(0,0,0,0)',
+                                borderWidth: 0,
+                                borderColor: '#ccc',
+                                width: 100,
+                                height: 40,
+                                offsetCenter: ['-60%', 10],       // x, y，单位px
+                                formatter: '{value}',
+                                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    color: 'auto',
+                                    fontSize: 30
+                                }
+                            },
+                            data: [{value: 0, name: '引体向上个数'}]
+                        }
+                    ]
+                };
+                option.series[0].data[0].value = 7;
+                myChart.setOption(option);
+            }
+    );
+</script>
+</body>
+</html>

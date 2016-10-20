@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>健身说明库</title>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/component.css" rel="stylesheet" type="text/css"  />
+	<!--web-font-->
+<!--
+	<link href='http://fonts.useso.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
+-->
+	<link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	<link href="data:text/css;charset=utf-8," data-href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">
+	<link href="css/docs.min.css" rel="stylesheet">
+	<link href="css/action.css" rel="stylesheet">
+	<style>
+.suggest{
+	width:388px; 
+	background-color:#fff;
+	position:absolute;
+	margin:0;
+	padding:0;
+	border-width:1px;
+	border-style:solid;
+	border-color: #999;
+}
+
+.suggest ul{
+	list-style:none;
+	display:block;
+	margin:0;
+	padding:0;
+}
+
+.suggest ul li {
+	padding:3px;
+	line-height:25px;
+	font-size: 14px;
+	color: #777;
+	cursor: pointer;
+	padding:3px;
+}
+.suggest ul li:hover{
+	background-color:#e5e5e5;
+	text-decoration: none;
+}
+.suggest strong{
+	color:#000;
+}
+	</style>
+</head>
+<body class="cbp-spmenu-push">
+	<div class="banner row" style="margin-top:7px;">
+		<div class="col-md-7 col-md-offset-3">
+				<input type="text" placeholder="请输入运动名" class="search_content"  id="search_content"/>	
+				<div class="search"></div>
+		 		
+		 		<div class="suggest" id="search-suggest" style="top: 40.2px; left: 15px;width:347px;z-index:100;">
+					<ul id="search-result">
+					   	
+					</ul>
+				</div>
+				
+			
+		</div>
+		<div class="col-md-1">
+			<div class="top-nav">
+				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+					<h3>Menu</h3>
+					<a href="loginIndex.html">主页</a>
+					<a href="Login.html">登录注册</a>
+					<a href="HealthEat.html">饮食推荐</a>
+					<a href="GetCodoon.html">绑定咕咚账号</a>
+					<a href="TestBodyFat.html">查看健康信息</a>
+					<a href="SendPlan.html">健身方案推荐</a>
+					<a href="ChangeBody.html">修改体测信息</a>
+					<a class="active" href="actionInstruction.html">健身资料说明库</a>
+				</nav>
+				<div class="main buttonset">	
+						<!-- Class "cbp-spmenu-open" 被应用于 "cbp-spmenu-push-toleft" 或者 "cbp-spmenu-push-toright" 在主体上 -->
+						<button id="showRightPush" style="margin-left:0px;background-color:white;"><img src="images/menu-icon.png"/></button>
+						<!--<span class="menu"></span>-->
+				</div>
+				<script src="js/classie.js"></script>
+				<script>
+				var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+				showRightPush = document.getElementById( 'showRightPush' ),
+				body = document.body;
+
+				showRightPush.onclick = function() {
+					classie.toggle( this, 'active' );
+					classie.toggle( body, 'cbp-spmenu-push-toleft' );
+					classie.toggle( menuRight, 'cbp-spmenu-open' );
+					disableOther( 'showRightPush' );
+				};
+
+				function disableOther( button ) {
+					if( button !== 'showRightPush' ) {
+						classie.toggle( showRightPush, 'disabled' );
+					}
+				}
+			</script>
+			<!-- 菜单脚本结束 -->
+		  </div>	
+			
+		</div>	
+		<div class="clearfix"></div>
+	</div>
+	<div class="row not_exist_msg" style="display:none;">
+		<div class="col-md-7 col-md-offset-3" style="color:red;font-size:16px;">
+			 搜索结果不存在
+		</div>
+	</div>
+<div class="container bs-docs-container" >
+  <div class="row">
+    <div class="col-md-9" role="main" id="passage">
+
+     </div>     
+     <div class="col-md-3" role="complementary">
+          <nav class="bs-docs-sidebar hidden-xs hidden-sm" style="margin-top:70px;">
+            <ul class="nav bs-docs-sidenav" id="ul_list">      
+                         
+            </ul>            
+          </nav>
+     </div>
+   </div>
+</div>
+
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/docs.min.js"></script>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<script src="js/modernizr.custom.js"></script>
+	<!-- //js -->	
+	<!-- start-smoth-scrolling-->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>	
+	<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	</script>
+	<!--//end-smoth-scrolling-->	
+    <script src="js/modernizr.custom.js"></script>	
+<!--smooth-scrolling-of-move-up-->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$().UItoTop({ easingType: 'easeOutQuart' });	
+	});
+</script>
+<a href="#" id="toTop " style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!--//smooth-scrolling-of-move-up-->
+<script type="text/javascript">
+var action_list_group;
+$.post("ActionServlet",{"page":"ActionList"},function(data){
+		action_list_group = JSON.parse(data);
+		var len = 0;
+		if(action_list_group!=null){
+			for(var action_type in action_list_group[0]){
+				len++;
+				var action_list_arr = action_list_group[0][action_type];
+				var item_son = "";
+				var msg_son = "";
+				for(var num=0;num<action_list_arr.length;num++){
+					var action = action_list_arr[num];
+					item_son +='<li><a href="#'+action.action_name+'">'
+					   +action.action_name+'</a></li>';
+					msg_son +='<h2 class="text-center" id="'+action.action_name+'"  >'
+						+action.action_name+'</h2>'
+						+'<div class="row image_div">'
+						+'<img src="'
+						+action.image_url+'" width="500px"/>'
+						//+'images/action/action1.png'+'" width="500px"/>'		
+						+'</div><div class="row content_div">'
+						+'<p>动作说明:<br/>'
+						+action.content
+						+'</p></div>';
+				}
+				var msg = '<div class="bs-docs-section"><h1 id="'
+					+action_type+'" class="page-header">'
+					+action_type+'</h1>'
+					+msg_son
+					+'</div>';
+				if(action_list_arr.length>0){
+					var item = '<li><a href="#'+action_type+'">'
+							   +action_type+'</a><ul class="nav">'
+							   +item_son
+							   +'</ul></li>'; 
+				}else{
+					var item = '<li><a href="#'+action_type+'">'
+					           +action_type+'</a></li>';
+				}	   
+				$("#passage").append(msg);
+				$("#ul_list").append(item);    
+				
+			}
+			$("#ul_list>li>a").on("click",function(){
+				$("#ul_list>li").removeClass("active");
+				$("#ul_list>li>ul").hide();
+				//$("#ul_list>li>a").css("font-size","18px");
+				$(this).parent().addClass("active");
+				//$(this).css("font-size","25px");
+				$(this).next("ul.nav").show();
+			});
+			
+			$(".search").click(function(){
+				   var content = $(".search_content").val();
+				   searchclickfn(content);
+				 //$(".search_content").val("");
+			});
+			
+			function searchclickfn(content){
+				var obj = $("#ul_list>li>a[href=#"+content+"]");
+				if(obj.length==0){
+					var elm = $("li a[href=#"+content+"]");
+					if(elm.length==0){
+						$(".not_exist_msg").show();
+						setTimeout("hide_not_exist_msg()",3000);
+					}else{
+						$("#ul_list>li").removeClass("active");
+						//$("#ul_list>li>a").css("font-size","18px");
+						$("#ul_list>li>ul").hide();
+						$(elm).parent().parent().prev().parent().addClass("active");
+						//$(elm).parent().parent().prev().css("font-size","25px");
+						$(elm).parent().parent().show();
+						location.href="#"+content;
+					}
+				}else{
+					$("#ul_list>li").removeClass("active");
+					//$("#ul_list>li>a").css("font-size","18px")
+					//$(obj).css("font-size","25px");
+					$("#ul_list>li>ul").hide();
+					$(obj).parent().addClass("active");
+					$(obj).next("ul").show();
+				}
+			}
+			
+			
+			$(window.document).scroll(function(){
+				$("h1.page-header").each(function(index){
+				   if(index<len-1){
+					if($(document).scrollTop()>=$(this).offset().top-50 &&$(document).scrollTop()<=$("h1.page-header").eq(index+1).offset().top+60){
+						$("#ul_list>li").removeClass("active");
+						//$("#ul_list>li>a").css("font-size","18px");
+						$("#ul_list>li>ul").hide();
+						//$("a[href=#"+$(this).html()+"]").css("font-size","25px");
+						$("a[href=#"+$(this).html()+"]").parent().addClass("active");
+						$("a[href=#"+$(this).html()+"]").next("ul").show();
+						
+					}
+				  }else{
+						if($(document).scrollTop()>=$(this).offset().top-50){
+							$("#ul_list>li").removeClass("active");
+							//$("#ul_list>li>a").css("font-size","18px");
+							$("#ul_list>li>ul").hide();
+							//$("a[href=#"+$(this).html()+"]").css("font-size","25px");
+							$("a[href=#"+$(this).html()+"]").parent().addClass("active");
+							$("a[href=#"+$(this).html()+"]").next("ul").show();
+							
+						}  
+				  }
+				});
+			});
+
+			$(window.document).scroll(function(){
+				$("h2.text-center").each(function(){
+					if($(document).scrollTop()>=$(this).offset().top-55 &&$(document).scrollTop()<=$(this).offset().top+45){
+						$("#ul_list li ul li").removeClass("active");
+						$("a[href=#"+$(this).html()+"]").parent().addClass("active");
+					}
+				});
+			});
+	
+		}
+		
+});
+function hide_not_exist_msg(){
+	$(".not_exist_msg").hide();
+}
+$(".search").change(function(){
+	$(".not_exist_msg").hide();
+});
+
+
+
+$('#search_content').bind('input propertychange', function() {
+	$("#search-result").empty();
+	var search_content = $("#search_content").val();
+	if(search_content!=""){
+		if(action_list_group!=null){
+			for(var action_type in action_list_group[0]){
+				var action_list_arr = action_list_group[0][action_type];
+				for(var num=0;num<action_list_arr.length;num++){
+					var action = action_list_arr[num];
+					if(action.action_name.indexOf(search_content)!= -1){
+						$("#search-result").append("<li>"+action.action_name+"</li>");
+					}
+				}
+			}
+		}
+		$("#search-result li").bind("click",function(){
+			var actionName = $(this).text();
+			location.href="#"+actionName;
+			$("#search-result").empty();
+		});
+	}
+});
+
+
+</script>
+ </body>
+</html>

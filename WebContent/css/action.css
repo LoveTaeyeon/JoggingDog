@@ -1,0 +1,64 @@
+body {
+	background: url('../images/img3.jpg') no-repeat;
+	background-attachment:fixed;
+	background-size: 100%;
+	font-family: "Helvetica Neue", Helvetica, Microsoft Yahei,
+		Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+
+.search_content {
+	width: 300px;
+	height: 41px;
+	float: left;
+	padding: 8px 8px 8px 12px;
+	border-width: 1px 0px 1px 1px;
+	border-style: solid;
+	border-color: #B8B8B8 transparent #CCC #B8B8B8;
+	outline: 0px none;
+}
+
+.search {
+	float: left;
+	width: 45px;
+	height: 41px;
+	background: url('../images/search.png') no-repeat #3385ff;
+	color: #fff;
+	background-origin: content-box;
+	padding: 12px;
+}
+
+.search:hover {
+	background-color: #317EF3;
+}
+
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
+}		
+
+h1,h2,p{
+  color : white;
+}
+.bs-docs-sidebar .nav>li>a{
+	font-size:18px;
+	color:white;
+}
+.bs-docs-sidebar .nav>.active:focus>a, .bs-docs-sidebar .nav>.active:hover>a, .bs-docs-sidebar .nav>.active>a{
+	color:white;
+	border-left:2px solid white;
+}
+.bs-docs-sidebar .nav>li>a:focus, .bs-docs-sidebar .nav>li>a:hover{
+	color:white;
+	border-left:1px solid white;	
+}
+.image_div{
+	text-align:center;
+	margin-top:20px;
+}
+.content_div{
+	font-size:18px;
+	color:#262f32;
+	line-height:1.6em;
+	font-weight:600;
+	margin-top:15px;
+}
